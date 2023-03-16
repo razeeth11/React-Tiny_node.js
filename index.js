@@ -7,7 +7,7 @@ import cors from 'cors'
 const PORT = 3232;
 
 // const URL = "mongodb://127.0.0.1";
-const URL = process.env.URL ;
+const URL = "mongodb+srv://mobdata:FyzqgyuF7Z8EY1oI@cluster0.mxmqnga.mongodb.net" ;
 const client = new MongoClient(URL);
 client.connect();
 
