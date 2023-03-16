@@ -1,11 +1,13 @@
 import express from "express";
 import { MongoClient } from "mongodb";
+import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+dotenv.config()
 import cors from 'cors'
 
 const PORT = 3232;
 
 // const URL = "mongodb://127.0.0.1";
-const URL = "mongodb+srv://mobdata:mobdata123@cluster0.mxmqnga.mongodb.net";
+const URL = process.env.URL ;
 const client = new MongoClient(URL);
 client.connect();
 
